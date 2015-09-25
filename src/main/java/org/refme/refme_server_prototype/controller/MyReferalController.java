@@ -5,6 +5,8 @@ import org.refme.refme_server_prototype.hib_pojo.RefererProfile;
 import org.refme.refme_server_prototype.model.ReferalItem;
 import org.refme.refme_server_prototype.service.ReferalListService;
 import org.refme.refme_server_prototype.service.RefererProfileService;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,9 +27,13 @@ public class MyReferalController {
   @Autowired
   private RefererProfileService refererProfileService;
     
+  private static final Logger LOG = LoggerFactory.getLogger(MyReferalController.class);
+  
     @RequestMapping(value = "/myReferalList")  
     public @ResponseBody Object myReferalListPage(){  
-        
+    
+        LOG.debug("Debug log");
+        LOG.info("Log info");
         List<ReferalItem> myReferalItems = referalListService.getMyReferals();             
         return myReferalItems;       
     }

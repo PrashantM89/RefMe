@@ -3,6 +3,8 @@ package org.refme.refme_server_prototype.dao;
 import java.util.ArrayList;
 import java.util.List;
 import org.refme.refme_server_prototype.model.ReferalItem;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,7 +14,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class ReferalListDAOIMPL implements ReferalListDAO{
 
-        
+    private static final Logger LOG = LoggerFactory.getLogger(ReferalListDAOIMPL.class);
+    
     private List<ReferalItem> listMyReferals = new ArrayList<ReferalItem>();
      
     @Override
@@ -27,7 +30,7 @@ public class ReferalListDAOIMPL implements ReferalListDAO{
             referalItem.setSenderName("A*$&% *&an");
             listMyReferals.add(referalItem);
         }
-             
+     LOG.debug("Total {} referals fetched",listMyReferals.size());
      return listMyReferals;
     }
     
