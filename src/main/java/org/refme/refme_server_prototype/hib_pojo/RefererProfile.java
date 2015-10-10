@@ -17,19 +17,19 @@ import javax.persistence.Table;
 public class RefererProfile implements Serializable {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "referer_id")
+    @Column(name = "referer_id",length = 10)
     private Integer refererId;
-    @Column(name="referer_name")
+    @Column(name="referer_name",length = 100)
     private String refererName;
-    @Column(name="referer_companyname")
+    @Column(name="referer_companyname",length = 100)
     private String refererCompanyName;
-    @Column(name="referer_emailid")
+    @Column(name="referer_emailid",length = 100)
     private String refererEmailId;
-    @Column(name="referer_image")
+    @Column(name="referer_image",length = 20000)
     private String refererImageString;
-    @Column(name="referer_totalexperience")
+    @Column(name="referer_totalexperience",length = 2)
     private Integer refererTotalExperience;
-    @Column(name="referer_designation")
+    @Column(name="referer_designation",length = 100)
     private String refererDesignation;
 
     public Integer getRefererId() {

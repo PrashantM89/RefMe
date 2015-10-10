@@ -41,11 +41,11 @@ public class MyReferalController {
     @RequestMapping(value = "/save")
     public ModelAndView saveRefererProfile(){
         RefererProfile myProfile = new RefererProfile();
-        myProfile.setRefererCompanyName("Accenture");
-        myProfile.setRefererDesignation("Software Engineer");
+        myProfile.setRefererCompanyName("Infosys");
+        myProfile.setRefererDesignation("Sr. Software Engineer");
         myProfile.setRefererEmailId("prashantm61289@gmail.com");
-        myProfile.setRefererName("Prashant Mishra");
-        myProfile.setRefererTotalExperience(2);
+        myProfile.setRefererName("Pratik Mishra");
+        myProfile.setRefererTotalExperience(1);
         myProfile.setRefererImageString("iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABHNCSVQICAgIfAhkiAAAHQJJREFU\n" +
 "    eJy1nHm8JVV1779r76o6547d0CNDMyg+hKuAhICIPNoJ44TRj7efovkkmhiJQwwmMYPGPhCnKIoT\n" +
 "    +QRnfVGefVWM43N6NBAkYXSgQcCGFnq+3X3HM1TV3nu9P6rqnHOhL6J9e38+9bnnnlu1a+9frfVb\n" +
